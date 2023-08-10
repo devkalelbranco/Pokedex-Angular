@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Pokemon } from '../components/models/pokemon';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiPokemonService {
-  pokemons = [];
+  pokemons:Array<Pokemon> = [];
 
   constructor( private httpClient:HttpClient) {
     this.getPokemons();

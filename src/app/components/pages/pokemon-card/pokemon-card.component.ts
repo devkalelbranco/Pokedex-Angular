@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Pokemon } from '../../models/pokemon';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -7,9 +8,16 @@ import { Component, Input } from '@angular/core';
 })
 export class PokemonCardComponent {
   @Input()
-  pokemon: string | undefined;
+  pokemon: Pokemon | undefined;
   @Input()
   number!: number;
+
+  name:string | undefined = '';
+
+  ngOnInit(){
+    this.name = this.pokemon?.name;
+  }
+
   getImagePokemon(){
     const numberFormat = this.leadingZero(this.number);
     return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${numberFormat}.png`
