@@ -1,0 +1,12 @@
+header{
+    width: 100%;
+    padding: 5px 15px;
+    border-bottom: 3px solid var(--bgCardGray);
+    box-shadow: 0 0 2px 2px #e9e8e8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo{
+    max-width: 50px;
+}

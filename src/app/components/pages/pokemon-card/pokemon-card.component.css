@@ -1,0 +1,25 @@
+.pokemonCard{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+.pokemonCard img{
+    max-width: 150px;
+    background-color: var(--bgCardGray);
+    border-radius: 5px;
+}
+h3{
+    width: 90%;
+    margin: auto;
+    text-align: start;
+    font-size: small;
+}
+h2{
+    width: 90%;
+    margin: auto;
+    text-align: start;
+    text-transform: capitalize;
+    font-weight: 700;
+}

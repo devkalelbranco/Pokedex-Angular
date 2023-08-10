@@ -1,0 +1,7 @@
+.search{
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    padding: 5px;
+    border-bottom: 3px solid var(--bgCardGray);
+}
