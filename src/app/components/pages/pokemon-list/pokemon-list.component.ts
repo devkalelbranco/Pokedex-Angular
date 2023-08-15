@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiPokemonService } from 'src/app/service/api-pokemon.service';
 
 @Component({
@@ -8,6 +9,10 @@ import { ApiPokemonService } from 'src/app/service/api-pokemon.service';
 })
 export class PokemonListComponent {
 
-  constructor(public pokemonservice:ApiPokemonService){}    
+  constructor(public pokemonservice:ApiPokemonService,
+    public router:Router){}    
 
+  onClickCard(){
+    this.router.navigate(['details'])
+  }
 }

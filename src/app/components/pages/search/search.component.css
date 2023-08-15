@@ -4,4 +4,51 @@
     background-color: #fff;
     padding: 5px;
     border-bottom: 3px solid var(--bgCardGray);
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: var(--bgColorYellow);
+}
+.searchName{
+    width: fit-content;
+    min-width: 300px;
+}
+.searchName input{
+    width: 100%;
+}
+.searchTypes{
+    width: fit-content;
+    max-width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+.searchTypes input{
+    width: 40%;
+}
+span{
+    margin-left: 15px;
+}
+.searchSubmit{
+    padding: 5px;
+    color: var(--bgColorBlue);
+    cursor: pointer;
+}
+input{
+    border: 2px solid var(--bgCardGray);
+    border-radius: 5px;
+    padding: 2px 5px;
+    text-align: start;
+    min-width: 100px;
+}
+input:focus{
+    outline-style: none;
+}
+
+div.page > * {
+    transition: 2s;
 }

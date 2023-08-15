@@ -1,7 +1,14 @@
-.pokemonList{
+div.pokemonList{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 10px;
     min-height: 70vh;
+}
+
+section{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    background-color: #fff;
 }

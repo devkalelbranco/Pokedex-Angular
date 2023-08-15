@@ -1,6 +1,10 @@
-<div class="pokemonList">
-    <app-pokemon-card *ngFor="let pokemon of pokemonservice.pokemons; index as id" 
-    [pokemon] = "pokemon"
-    [number] = "id + 1"
-    ></app-pokemon-card>
+<div class="page">
+    <app-search></app-search>
+    <div class="pokemonList">
+        <app-pokemon-card *ngFor="let pokemon of pokemonservice.pokemons; index as id" 
+        [pokemon] = "pokemon"
+        [number] = "id + 1"
+        (click)="onClickCard()"
+        ></app-pokemon-card>
+    </div>
 </div>

@@ -1,0 +1,10 @@
+.container{
+    background-color: var(--bgHomeBlue);
+}
+
+section{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    background-color: #fff;
+}
