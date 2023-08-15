@@ -7,7 +7,7 @@ import { lastValueFrom } from 'rxjs';
 })
 export class ApiPokemonService {
   pokemons: any = [];
-  types = [];
+  types:Array<string> = [];
   names:Array<string> = [];
   
 
@@ -38,10 +38,12 @@ export class ApiPokemonService {
   getTypesNames(){
     const request = this.httpClient.get<any>('https://pokeapi.co/api/v2/type').toPromise();
       this.types = [];      
-      request.then((item) => {
-        if(item.results){
-          item.results.forEach((item:any) => {
-            this.types.push(item.name);
+      request.then((items:any) => {
+        if(items.results){
+          items.results.forEach((item:any) => {
+            if(item?.name){
+              this.types.push(item.name);
+            }
           })
         }
       }).finally(() => console.log(this.types));
