@@ -9,10 +9,11 @@ import { ApiPokemonService } from 'src/app/service/api-pokemon.service';
 })
 export class PokemonListComponent {
 
-  constructor(public pokemonservice:ApiPokemonService,
+  constructor(
+    public pokemonservice:ApiPokemonService,
     public router:Router){}    
 
-  onClickCard(){
-    this.router.navigate(['details'])
+  onClickCard(name:string){
+    this.router.navigate(['details', name])
   }
 }

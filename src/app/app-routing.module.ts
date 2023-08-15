@@ -5,8 +5,8 @@ import { DetailsComponent } from './components/pages/details/details.component';
 import { PokemonListComponent } from './components/pages/pokemon-list/pokemon-list.component';
 
 const routes: Routes = [
-  {path:'', component:PokemonListComponent},
-  {path:'details', component:DetailsComponent}
+  {path:'', component:HomeComponent},
+  {path:'details/:name', component:DetailsComponent}
 ];
 
 @NgModule({

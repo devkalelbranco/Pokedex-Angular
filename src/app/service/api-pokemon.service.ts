@@ -1,19 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Pokemon } from '../components/models/pokemon';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiPokemonService {
-<<<<<<< Updated upstream
-  pokemons:Array<Pokemon> = [];
-=======
   pokemons: any = [];
   types = [];
   names:Array<string> = [];
   
->>>>>>> Stashed changes
 
   constructor( private httpClient:HttpClient) {
     this.getPokemons();
@@ -38,5 +34,24 @@ export class ApiPokemonService {
       }
     }).finally(() => console.log(this.names));
   }
+
+  getTypesNames(){
+    const request = this.httpClient.get<any>('https://pokeapi.co/api/v2/type').toPromise();
+      this.types = [];      
+      request.then((item) => {
+        if(item.results){
+          item.results.forEach((item:any) => {
+            this.types.push(item.name);
+          })
+        }
+      }).finally(() => console.log(this.types));
+  }
+
+  getPokemon(name:string):Promise<any>{
+    const request = lastValueFrom(this.httpClient.get(`https://pokeapi.co/api/v2/pokemon/${name}`));
+    return request;
+  }
+
+
 }
  
